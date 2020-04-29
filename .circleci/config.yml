@@ -19,6 +19,6 @@ jobs:
           name: "go unit tests"
           command: |
             go test -gcflags="-e" -timeout=10m -race -coverprofile=coverage.txt -covermode=atomic -v ./...
-            echo "bash <(curl -s https://codecov.io/bash)"
+            bash <(curl -s https://codecov.io/bash)
       - store_artifacts:
           path: /tmp/artifacts
