@@ -207,7 +207,7 @@ func (v *Verifier) ReadFromFile(path string) (int64, error) {
 	return v.ReadFrom(f)
 }
 
-// ReaderFrom reads and verifies data from r until io.EOF or error. It does not
+// ReadFrom reads and verifies data from r until io.EOF or error. It does not
 // close Verifier automatically, so it is possible to combine it with other
 // writing methods and/or to call it multiple times. To verify if the data is
 // shorter than expected, Close should be called after writing all the data.
